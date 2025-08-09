@@ -1,0 +1,90 @@
+
+import React, { useEffect, useState } from "react";
+
+const Navbar = () => {
+  const [isTop, setIsTop] = useState(true);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTop(window.scrollY < 40);
+      // Scroll spy logic
+      const sections = [
+        { id: "home", offset: 0 },
+        { id: "about" },
+        { id: "product" },
+        { id: "service" },
+      ];
+      let current = "home";
+      for (let i = 0; i < sections.length; i++) {
+        const el = document.getElementById(sections[i].id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 80;
+          if (window.scrollY >= top) {
+            current = sections[i].id;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isTop
+          ? "bg-transparent shadow-none border-none"
+          : "bg-white shadow-md border-b border-gray-200"
+      }`}
+      style={isTop ? { background: "transparent", boxShadow: "none", border: "none" } : { background: "#fff" }}
+    >
+      <nav className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
+        <div className="flex items-center">
+          <img src="/logo.svg" alt="Logo" className="align-center w-10 h-10 rounded-full z-10" />
+          <span className="text-2xl font-bold text-red-600 text-shadow-md">Rena <span className="text-black text-shadow-md">Djaja</span></span>
+        </div>
+        <ul className="hidden md:flex gap-8 font-semibold text-black">
+          <li>
+            <a
+              href="#home"
+              className={`transition ${activeSection === "home" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className={`transition ${activeSection === "about" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="#product"
+              className={`transition ${activeSection === "product" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
+            >
+              Product
+            </a>
+          </li>
+          <li>
+            <a
+              href="#service"
+              className={`transition ${activeSection === "service" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
+            >
+              Service
+            </a>
+          </li>
+        </ul>
+        <button className="md:hidden text-black focus:outline-none" aria-label="Open Menu">
+          <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

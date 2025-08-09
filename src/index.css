@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@keyframes color-cycle {
+  0% {
+    color: theme('colors.red.500');
+  }
+  25% {
+    color: theme('colors.red.600');
+  }
+  50% {
+    color: theme('colors.red.700');
+  }
+  75% {
+    color: theme('colors.red.600');
+  }
+  100% {
+    color: theme('colors.red.500');
+  }
+}
+.animate-color-cycle {
+  animation: color-cycle 5s linear infinite;
+}
