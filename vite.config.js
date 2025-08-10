@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base : 'https://github.com/bayu3prayitno/rena-djaja.git',
+  base: '/rena-djaja/',
   plugins: [react(), tailwindcss()],
 })
