@@ -4,18 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  theme: {
-    extend: {
-      keyframes: {
-        colorChange: {
-          '0%, 100%': { color: '#dc2626' }, // red-600
-          '50%': { color: '#000000ff' },      // red-400
-        },
-      },
-      animation: {
-        'color-change': 'colorChange 1s ease-in-out infinite',
-      },
-    },
-  },
+  base : 'https://github.com/bayu3prayitno/rena-djaja.git',
   plugins: [react(), tailwindcss()],
 })
