@@ -1,4 +1,3 @@
-
 const Home = () => {
   return (
     <>
@@ -10,7 +9,7 @@ const Home = () => {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{
-            backgroundImage: "url('/bg.webp')",
+            backgroundImage: "url('bg.webp')",
             backgroundAttachment: "fixed",
           }}
           aria-hidden="true"
@@ -43,7 +42,7 @@ const Home = () => {
         </div>
         <div className="absolute top-75 z-11">
           <img
-            src="/produk.png"
+            src="produk.png"
             alt="Moto Cap Mobil"
             className="w-170 h-130 object-contain"
           />

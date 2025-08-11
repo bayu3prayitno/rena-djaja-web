@@ -8,7 +8,7 @@ const Produk = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 justify-center">
           <div className="flex-shrink-0 flex items-center justify-center md:justify-end w-full md:w-auto">
             <img
-              src="/produk1.png"
+              src="produk1.png"
               alt="Moto Cap Mobil"
               className="w-100 h-100 object-contain"
             />

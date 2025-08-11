@@ -43,7 +43,7 @@ const Navbar = () => {
       <nav className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
         {/* Logo */}
         <div className="flex items-center">
-          <img src="/logo.svg" alt="Logo" className="align-center w-10 h-10 rounded-full z-10" />
+          <img src="logo.svg" alt="Logo" className="align-center w-10 h-10 rounded-full z-10" />
           <span className="text-2xl font-bold bg-gradient-to-r from-red-500 via-red-700 to-red-900 bg-clip-text text-transparent text-shadow-md">Rena Djaja</span>
         </div>
 
