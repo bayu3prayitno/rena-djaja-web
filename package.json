@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bayu3prayitno.github.io/rena-djaja-web ",
+  "homepage": "https://prayitno.me/rena-djaja-web ",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
