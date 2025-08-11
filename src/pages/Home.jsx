@@ -10,7 +10,7 @@ const Home = () => {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{
-            backgroundImage: "url('/bg1.webp')",
+            backgroundImage: "url('/bg.webp')",
             backgroundAttachment: "fixed",
           }}
           aria-hidden="true"

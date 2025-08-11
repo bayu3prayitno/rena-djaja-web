@@ -71,7 +71,7 @@ const Footer = () => {
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15838.39388923213!2d110.4228611!3d-6.9903611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTknMjUuMyJTIDExMMKwMjUnMjIuMyJF!5e0!3m2!1sen!2sid!4v1723200000000!5m2!1sen!2sid"
                 width="100%"
                 height="200"
-                style={{ border: 0 }}
+                style={{ border: 0}}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

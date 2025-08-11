@@ -1,9 +1,9 @@
-
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isTop, setIsTop] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // NEW state
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,48 +41,64 @@ const Navbar = () => {
       style={isTop ? { background: "transparent", boxShadow: "none", border: "none" } : { background: "#fff" }}
     >
       <nav className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
+        {/* Logo */}
         <div className="flex items-center">
           <img src="/logo.svg" alt="Logo" className="align-center w-10 h-10 rounded-full z-10" />
-          <span className="text-2xl font-bold text-red-600 text-shadow-md">Rena <span className="text-black text-shadow-md">Djaja</span></span>
+          <span className="text-2xl font-bold bg-gradient-to-r from-red-500 via-red-700 to-red-900 bg-clip-text text-transparent text-shadow-md">Rena Djaja</span>
         </div>
+
+        {/* Menu Desktop */}
         <ul className="hidden md:flex gap-8 font-semibold text-black">
-          <li>
-            <a
-              href="#home"
-              className={`transition ${activeSection === "home" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              className={`transition ${activeSection === "about" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="#product"
-              className={`transition ${activeSection === "product" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
-            >
-              Product
-            </a>
-          </li>
-          <li>
-            <a
-              href="#service"
-              className={`transition ${activeSection === "service" ? "text-red-600 underline" : "hover:underline hover:text-red-600"}`}
-            >
-              Service
-            </a>
-          </li>
+          {["home", "about", "product", "service"].map((id) => (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                className={`transition ${
+                  activeSection === id
+                    ? "text-red-600 underline"
+                    : "hover:underline hover:text-red-600"
+                }`}
+              >
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </a>
+            </li>
+          ))}
         </ul>
-        <button className="md:hidden text-black focus:outline-none" aria-label="Open Menu">
-          <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+
+        {/* Hamburger Button */}
+        <button
+          className="md:hidden text-red-700 focus:outline-none z-22"
+          aria-label="Open Menu"
+          onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu
+        >
+          <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
         </button>
       </nav>
+
+      {/* Menu Mobile */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md">
+          <ul className="flex flex-col items-center gap-4 py-4 font-semibold text-black">
+            {["home", "about", "product", "service"].map((id) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={`transition ${
+                    activeSection === id
+                      ? "text-red-600 underline"
+                      : "hover:underline hover:text-red-600"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)} // Tutup menu setelah klik
+                >
+                  {id.charAt(0).toUpperCase() + id.slice(1)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
