@@ -24,19 +24,6 @@ const Footer = () => {
               placeat animadverto ventito patruus tripudio infit bis velit
               vicissitudo texo abstergo.
             </p>
-            
-            <div className="flex items-center gap-4 w-100 p-0 max-w-sm">
-          <img
-            src="halal.png"
-            alt="Moto Cap Mobil"
-            className="w-12 h-12 object-contain"
-          />
-          <p className="text-gray-400 text-xs leading-snug">
-            Seluruh produk kami telah mendapatkan sertifikat halal dari Majelis
-            Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
-            (BPJPH)
-          </p>
-        </div>
           </div>
 
           <div>
@@ -48,9 +35,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-2">
                 <Instagram className="h-4 w-4 text-red-600 mt-0.5" />
-                <span className="text-gray-300 text-sm">
-                  @renadjaja
-                </span>
+                <span className="text-gray-300 text-sm">@renadjaja</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-red-600" />
@@ -85,6 +70,18 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
+        </div>
+        <div className="flex items-center gap-4 p-2 max-w-sm">
+          <img
+            src="halal.png"
+            alt="Moto Cap Mobil"
+            className="w-12 h-12 object-contain"
+          />
+          <p className="text-gray-400 text-xs leading-snug">
+            Seluruh produk kami telah mendapatkan sertifikat halal dari Majelis
+            Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
+            (BPJPH)
+          </p>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
