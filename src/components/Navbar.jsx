@@ -13,7 +13,7 @@ const Navbar = () => {
         { id: "home", offset: 0 },
         { id: "about" },
         { id: "product" },
-        { id: "service" },
+        { id: "recipe" },
       ];
       let current = "home";
       for (let i = 0; i < sections.length; i++) {
@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Menu Desktop */}
         <ul className="hidden md:flex gap-8 font-semibold text-black">
-          {["home", "about", "product", "service"].map((id) => (
+          {["home", "about", "product", "recipe"].map((id) => (
             <li key={id}>
               <a
                 href={`#${id}`}
@@ -81,7 +81,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md">
           <ul className="flex flex-col items-center gap-4 py-4 font-semibold text-black">
-            {["home", "about", "product", "service"].map((id) => (
+            {["home", "about", "product", "recipe"].map((id) => (
               <li key={id}>
                 <a
                   href={`#${id}`}

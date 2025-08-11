@@ -10,7 +10,7 @@ const Produk = () => {
             <img
               src="produk1.png"
               alt="Moto Cap Mobil"
-              className="w-100 h-100 object-contain"
+              className="max-w-xs"
             />
           </div>
           <div className="text-left max-w-md">
@@ -32,13 +32,13 @@ const Produk = () => {
             </ul>
           </div>
         </div>
-        <div className="flex items-center gap-4 p-2 text-left">
+        <div className="bg-white flex items-center gap-4 p-5 m-5 w-full text-left rounded-md hover:shadow-xl transition-shadow">
           <img
             src="halal.png"
             alt="Moto Cap Mobil"
-            className="w-12 h-12 object-contain"
+            className="w-20 h-20 object-contain"
           />
-          <p className="text-black text-xs leading-snug">
+          <p className="text-black text-sm leading-snug">
             Produk kami telah mendapatkan sertifikat halal dari Majelis
             Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
             (BPJPH)

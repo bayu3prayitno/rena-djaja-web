@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Tentang from "./pages/About_Us";
 import Produk from "./pages/Product";
-import Layanan from "./pages/Service";
+import Recipe from "./pages/Recipe";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Home />
         <Tentang />
         <Produk />
-        <Layanan />
+        <Recipe />
       </main>
       <Footer />
     </div>
