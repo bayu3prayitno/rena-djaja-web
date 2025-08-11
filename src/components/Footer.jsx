@@ -71,18 +71,7 @@ const Footer = () => {
 
           {/* Contact Info */}
         </div>
-        <div className="flex items-center gap-4 p-2 max-w-sm">
-          <img
-            src="halal.png"
-            alt="Moto Cap Mobil"
-            className="w-12 h-12 object-contain"
-          />
-          <p className="text-gray-400 text-xs leading-snug">
-            Seluruh produk kami telah mendapatkan sertifikat halal dari Majelis
-            Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
-            (BPJPH)
-          </p>
-        </div>
+        
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Rena Djaja. All Rights Reserved.

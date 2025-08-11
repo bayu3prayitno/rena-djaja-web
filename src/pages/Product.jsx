@@ -32,6 +32,18 @@ const Produk = () => {
             </ul>
           </div>
         </div>
+        <div className="flex items-center gap-4 p-2 text-left">
+          <img
+            src="halal.png"
+            alt="Moto Cap Mobil"
+            className="w-12 h-12 object-contain"
+          />
+          <p className="text-black text-xs leading-snug">
+            Produk kami telah mendapatkan sertifikat halal dari Majelis
+            Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
+            (BPJPH)
+          </p>
+        </div>
       </div>
     </section>
   );
