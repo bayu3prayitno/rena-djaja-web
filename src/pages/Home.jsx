@@ -26,7 +26,7 @@ const Home = () => {
               Dapur Indonesia
             </span>
           </h1>
-          <p className="text-lg md:text-1xl text-red-700 mb-8 font-medium">
+          <p className="text-lg md:text-1xl text-black mb-8 font-medium">
             Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
             faucibus.
           </p>

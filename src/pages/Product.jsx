@@ -15,7 +15,7 @@ const Produk = () => {
           </div>
           <div className="text-left max-w-md">
             <h3 className="text-2xl font-bold text-red-600 mb-2 bg-gradient-to-r from-red-600 via-red-700 to-red-800 bg-clip-text text-transparent">Moto Cap Mobil</h3>
-            <p className="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="text-gray-700 mb-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <ul className="list-disc list-inside text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-1">•</span>
@@ -38,7 +38,7 @@ const Produk = () => {
             alt="Moto Cap Mobil"
             className="w-20 h-20 object-contain"
           />
-          <p className="text-black text-sm leading-snug">
+          <p className="text-black text-sm text-justify leading-snug">
             Produk kami telah mendapatkan sertifikat halal dari Majelis
             Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
             (BPJPH)
