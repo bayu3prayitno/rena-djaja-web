@@ -24,20 +24,19 @@ const Footer = () => {
               placeat animadverto ventito patruus tripudio infit bis velit
               vicissitudo texo abstergo.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-red-600 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-red-600 transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
+            
+            <div className="flex items-center gap-4 w-100 p-0 max-w-sm">
+          <img
+            src="halal.png"
+            alt="Moto Cap Mobil"
+            className="w-12 h-12 object-contain"
+          />
+          <p className="text-gray-400 text-xs leading-snug">
+            Seluruh produk kami telah mendapatkan sertifikat halal dari Majelis
+            Ulama Indonesia (MUI) dan Badan Penyelenggara Jaminan Produk Halal
+            (BPJPH)
+          </p>
+        </div>
           </div>
 
           <div>
@@ -46,6 +45,12 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-red-600" />
                 <span className="text-gray-300 text-sm">+62 857 1234 5678</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Instagram className="h-4 w-4 text-red-600 mt-0.5" />
+                <span className="text-gray-300 text-sm">
+                  @renadjaja
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-red-600" />
@@ -71,7 +76,7 @@ const Footer = () => {
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15838.39388923213!2d110.4228611!3d-6.9903611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTknMjUuMyJTIDExMMKwMjUnMjIuMyJF!5e0!3m2!1sen!2sid!4v1723200000000!5m2!1sen!2sid"
                 width="100%"
                 height="200"
-                style={{ border: 0}}
+                style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -81,7 +86,6 @@ const Footer = () => {
 
           {/* Contact Info */}
         </div>
-
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Rena Djaja. All Rights Reserved.
