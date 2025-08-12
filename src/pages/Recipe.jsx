@@ -60,7 +60,12 @@ const Recipe = () => {
             delay: 2000, // jeda 2 detik
             disableOnInteraction: false,
           }}
-          speed={800} // kecepatan transisi smooth (ms)
+          speed={800}
+          breakpoints={{
+            320: { slidesPerView: 1 },  // HP
+            640: { slidesPerView: 2 },  // Tablet
+            1024: { slidesPerView: 3 }, // Desktop
+          }}
         >
           {recipes.map((item, index) => (
             <SwiperSlide key={index}>
