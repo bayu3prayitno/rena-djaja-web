@@ -34,7 +34,7 @@ const Home = () => {
             <a
               href="#about"
               className="bg-transparent text-red-600 px-6 py-3 rounded-full font-bold shadow 
-                 hover:bg-red-600 hover:text-white transition border-3 border-red-600"
+                 hover:bg-gradient-to-r hover:from-red-600 hover:to-red-900 hover:text-white transition border-3 border-red-600"
             >
               Get Started
             </a>
