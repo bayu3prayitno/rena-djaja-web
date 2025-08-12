@@ -1,12 +1,48 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
-import { Clock, MapPin, Package } from "lucide-react";
+// Import CSS Swiper
+import "swiper/css";
 
-const recipe = () => {
+const Recipe = () => {
+  const recipes = [
+    {
+      img: "kangkung.webp",
+      title: "Resep Kangkung",
+      desc: "Resep Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      img: "opor.jpg",
+      title: "Resep Opor",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      img: "nasgor.jpg",
+      title: "Resep Nasi Goreng",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      img: "seblak.jpg",
+      title: "Resep Seblak",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      img: "baso.webp",
+      title: "Resep Bakso",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      img: "geprek.jpg",
+      title: "Resep Ayam Geprek",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+  ];
+
   return (
     <section id="recipe" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Recipe
           </h2>
@@ -15,64 +51,38 @@ const recipe = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white  rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-            <img
-              src="kangkung.webp"
-              alt="Custom Packaging"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Resep Cah Kangkung
-              </h3>
-              <p className="text-gray-600">
-                perspiciatis tandem voluptatem avarus vel appello distinctio
-                tero placeat animadverto ventito patruus tripudio infit bis
-                velit vicissitudo texo abstergo.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white  rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-            <img
-              src="opor.jpg"
-              alt="Custom Packaging"
-              className="w-full h-44 object-cover "
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Resep Opor
-              </h3>
-              <p className="text-gray-600">
-                perspiciatis tandem voluptatem avarus vel appello distinctio
-                tero placeat animadverto ventito patruus tripudio infit bis
-                velit vicissitudo texo abstergo.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white  rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-            <img
-              src="nasgor.jpg"
-              alt="Custom Packaging"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Resep Nasi Goreng
-              </h3>
-              <p className="text-gray-600">
-                perspiciatis tandem voluptatem avarus vel appello distinctio
-                tero placeat animadverto ventito patruus tripudio infit bis
-                velit vicissitudo texo abstergo.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={3}
+          loop={true}
+          autoplay={{
+            delay: 2000, // jeda 2 detik
+            disableOnInteraction: false,
+          }}
+          speed={800} // kecepatan transisi smooth (ms)
+        >
+          {recipes.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-xl text-center m-5 hover:shadow-lg transition-shadow">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-44 object-cover rounded-t-lg"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-black mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
 };
 
-export default recipe;
+export default Recipe;
