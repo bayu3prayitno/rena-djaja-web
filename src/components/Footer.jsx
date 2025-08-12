@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  ChefHat,
   Facebook,
   Instagram,
   Phone,
@@ -16,7 +15,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <ChefHat className="h-8 w-8 text-red-600" />
+              <img src="logo.svg" alt="Logo" className="h-8 w-8 text-red-600" />
               <span className="text-xl font-bold">Rena Djaja</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
