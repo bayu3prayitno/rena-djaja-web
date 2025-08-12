@@ -43,7 +43,7 @@ const Produk = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-white flex items-center gap-4 p-5 m-5 w-full rounded-md hover:shadow-xl transition-shadow">
+        <div className="bg-white flex flex-col sm:flex-row items-center sm:items-center gap-4 p-5 m-5 w-full sm:w-auto sm:max-w-none max-w-xl mx-auto rounded-md hover:shadow-xl transition-shadow">
           <img
             src="halal.png"
             alt="Logo Halal"
