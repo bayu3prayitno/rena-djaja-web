@@ -69,7 +69,7 @@ const Recipe = () => {
         >
           {recipes.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl text-center m-5 hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-xl text-center m-5 hover:scale-105 hover:-translate-y-2 hover:shadow-lg transition-shadow">
                 <img
                   src={item.img}
                   alt={item.title}
